@@ -15,6 +15,28 @@
     height: 100vh; /* Garante que a altura do body ocupe 100% da tela */
     color: white;
         }
+       .contact-buttons {
+    display: flex;
+    gap: 15px; /* espaço entre os botões */
+    margin-top: 20px;
+  }
+
+  .btn-contact {
+    background-color: rgb(14, 3, 32);
+    color: rgb(239, 107, 239);
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .btn-contact:hover {
+    background-color: rgb(239, 107, 239);
+    color: rgb(14, 3, 32);
+  }
     </style>
   </head>
   <body>
@@ -69,12 +91,10 @@
            <a href=" https://github.com/LaryssaBarbosa" target="_blank">
          <img src="git.png" alt="Github" width="60" height="60">
           </a>
-             <a href="https://lattes.cnpq.br/8885918313461434" target="_blank">
-         <img src="lat.png" alt="latters" width="60" height="60">
-          </a>
-               <a href="laryssabarbosasoares@gmail.com" target="_blank">
-         <img src="email.png" alt="email" width="60" height="60">
-          </a>
+     <div class="contact-buttons">
+  <a href="https://lattes.cnpq.br/8885918313461434" target="_blank" class="btn-contact">Lattes</a>
+  <a href="mailto:laryssabarbosasoares@gmail.com" class="btn-contact">Email</a>
+</div>
           
            
         
