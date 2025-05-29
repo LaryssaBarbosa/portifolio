@@ -1,23 +1,24 @@
 /* Estilo para o body */
 body {
   background-color: black;
-  background-position: center; /* Centraliza a imagem */
-  background-attachment: fixed; /* Faz a imagem fixar quando rolar a página */
-  margin: 0; /* Remove as margens padrões */
-  height: 100vh; /* Garante que a altura do body ocupe 100% da tela */
-  color: white; /* Cor do texto */
-  font-family: 'Poppins', sans-serif; /* Fonte bonita */
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  height: 100vh;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden; /* evita scroll horizontal */
 }
 
 /* Estilo para o iframe (imagem do Canva) */
 iframe {
-  position: fixed; /* Fixa o iframe na tela */
-  top: 56px; /* Coloca o iframe logo abaixo da navbar */
+  position: fixed;
+  top: 56px;
   left: 0;
-  width: 100%; /* Ocupa toda a largura da tela */
-  height: 20vh; /* Ocupa 20% da altura da tela */
-  border: none; /* Remove a borda do iframe */
-  z-index: 0; /* Garante que o iframe fique atrás de outros elementos */
+  width: 100%;
+  height: 20vh;
+  border: none;
+  z-index: 0;
 }
 
 /* Estilo do menu fixo */
@@ -26,32 +27,32 @@ iframe {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000; /* Garante que a navbar fique acima do iframe */
-  background-color: rgba(0, 0, 0, 0.7); /* Navbar com fundo semitransparente */
-  transition: background-color 0.3s ease; /* Transição suave da cor */
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: background-color 0.3s ease;
 }
 
 .navbar:hover {
-  background-color: rgba(0, 0, 0, 0.9); /* Cor mais forte ao passar o mouse */
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
-/* Estilo da imagem arredondada */
+/* Imagem arredondada */
 .rounded-image, .rounded-img {
-  width: 350px; /* Tamanho original da imagem */
-  height: 350px; /* Tamanho original da imagem */
+  width: 350px;
+  height: 350px;
   object-fit: cover;
-  border-radius: 50%; /* Arredonda a imagem */
+  border-radius: 50%;
   margin-right: 30px;
-  box-shadow: 0 0 20px rgba(209, 16, 209, 0.8); /* Brilho roxo ao redor da imagem */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+  box-shadow: 0 0 20px rgba(209, 16, 209, 0.8);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .rounded-image:hover, .rounded-img:hover {
-  transform: scale(1.1); /* Aumenta o tamanho da imagem ao passar o mouse */
-  box-shadow: 0 0 30px rgba(209, 16, 209, 1); /* Aumenta o brilho ao passar o mouse */
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(209, 16, 209, 1);
 }
 
-/* Estilo da área de texto e imagem */
+/* Área de texto e imagem */
 .hero-section {
   display: flex;
   align-items: center;
@@ -59,44 +60,50 @@ iframe {
   min-height: 100vh;
   padding: 0 20px;
   position: relative;
+  flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
 }
 
-/* Estilo do texto de impacto */
+/* Texto de impacto */
 .impact-text {
-  font-size: 2rem; /* Tamanho do texto */
+  font-size: 2rem;
   font-weight: bold;
-  color: white; /* Cor do texto */
-  font-family: 'Roboto', sans-serif; /* Outra fonte para o texto */
-  transition: opacity 0.5s ease; /* Transição suave */
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  transition: opacity 0.5s ease;
+  max-width: 600px; /* limita a largura para melhor leitura */
+  margin: 20px 0;
 }
 
-/* Estilo do botão */
+/* Botões */
 .botao {
   background-color: rgb(14, 3, 32);
   border-radius: 50px;
   color: rgb(239, 107, 239);
   padding: 10px 20px;
   text-transform: uppercase;
-  letter-spacing: 1px; /* Espaçamento nas letras */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .botao:hover {
   background-color: rgb(239, 107, 239);
   color: rgb(14, 3, 32);
+  transform: scale(1.05);
 }
 
-/* Estilo dos cards */
+/* Cards */
 .card {
   width: 18rem;
-  box-shadow: 0 0 15px rgba(128, 0, 128, 0.8); /* Luz roxa ao redor da div */
-  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease; /* Transição suave */
+  box-shadow: 0 0 15px rgba(128, 0, 128, 0.8);
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease;
   margin: 15px;
 }
 
 .card:hover {
-  box-shadow: 0 0 25px rgba(128, 0, 128, 1); /* Aumenta o brilho ao passar o mouse */
-  transform: translateY(-5px); /* Dá um efeito de elevação */
+  box-shadow: 0 0 25px rgba(128, 0, 128, 1);
+  transform: translateY(-5px);
 }
 
 .card-img-top {
@@ -106,15 +113,16 @@ iframe {
 }
 
 .knowledge-card {
-  background-color: #6a0dad; /* Cor roxa */
+  background-color: #6a0dad;
   color: white;
   padding: 20px;
   border-radius: 8px;
-  transition: transform 0.3s ease; /* Transição suave */
+  transition: transform 0.3s ease;
+  text-align: center;
 }
 
 .knowledge-card:hover {
-  transform: translateY(-5px); /* Eleva o card ao passar o mouse */
+  transform: translateY(-5px);
 }
 
 .knowledge-card .knowledge-img {
@@ -146,12 +154,19 @@ iframe {
 .project-title {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  font-family: 'Roboto', sans-serif; /* Fonte do título do projeto */
+  font-family: 'Roboto', sans-serif;
 }
 
 .project-description {
   font-size: 1rem;
+  line-height: 1.5;
+  color: #b0b0b0;
   margin-bottom: 15px;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .btn-project {
@@ -160,7 +175,9 @@ iframe {
   border-radius: 50px;
   padding: 8px 16px;
   text-decoration: none;
-  transition: background-color 0.3s ease; /* Transição suave */
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .btn-project:hover {
@@ -173,8 +190,10 @@ iframe {
 }
 
 .future-projects-text {
-  font-size: 1.2rem;
-  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #e1e1e1;
+  text-align: center;
 }
 
 /* Seção de Conhecimentos */
@@ -191,42 +210,64 @@ iframe {
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .rounded-image, .rounded-img {
-    width: 250px; /* Ajusta o tamanho da imagem para telas menores */
-    height: 250px;
+    width: 280px;
+    height: 280px;
+    margin-right: 20px;
   }
 
   .impact-text {
-    font-size: 1.5rem; /* Ajusta o tamanho do texto */
+    font-size: 1.8rem;
+  }
+
+  .card {
+    width: 45%;
+    margin: 15px auto;
+  }
+
+  .knowledge-card {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rounded-image, .rounded-img {
+    width: 250px;
+    height: 250px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .impact-text {
+    font-size: 1.5rem;
+    max-width: 100%;
+    text-align: center;
   }
 
   .card {
     width: 100%;
-    margin: 10px auto; /* Centraliza e dá mais espaço entre os cards */
-  }
-
-  .navbar {
-    background-color: rgba(0, 0, 0, 0.8); /* Navbar mais opaca em telas menores */
+    margin: 10px auto;
   }
 
   .knowledge-card {
-    padding: 15px; /* Menos padding para telas menores */
+    padding: 15px;
   }
 }
 
 @media (max-width: 576px) {
-  .hero-section {
-    flex-direction: column;
-  }
-
   .rounded-image, .rounded-img {
-    width: 200px; /* Ajusta o tamanho da imagem ainda mais */
+    width: 200px;
     height: 200px;
   }
 
   .impact-text {
-    font-size: 1.2rem; /* Ajusta o tamanho do texto para telas muito pequenas */
+    font-size: 1.2rem;
   }
 
   .card {
@@ -234,10 +275,11 @@ iframe {
   }
 
   .knowledge-card h3 {
-    font-size: 1rem; /* Ajusta o tamanho do título */
+    font-size: 1rem;
   }
 }
-/* Efeito de fade-in ao carregar os elementos */
+
+/* Efeito fade-in */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -249,18 +291,17 @@ iframe {
   }
 }
 
-/* Aplicando no corpo */
 .hero-section {
   animation: fadeIn 1.5s ease-out;
 }
 
-/* Efeito de zoom ao passar o mouse nas imagens */
+/* Zoom hover imagem */
 .rounded-image:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
 
-/* Animação para os botões */
+/* Animação botões */
 .botao {
   transition: all 0.3s ease;
 }
@@ -270,14 +311,17 @@ iframe {
   color: white;
   transform: scale(1.05);
 }
+
+/* Espaçamento entre ícones e botões */
 .d-flex.align-items-center {
-  gap: 10px; /* Espaçamento entre todos os ícones e botões */
+  gap: 10px;
 }
 
 .contact-buttons {
   display: flex;
-  gap: 10px; /* Espaçamento entre os botões */
-  margin-left: 10px; /* Pequeno espaço entre imagens e botões */
+  gap: 10px;
+  margin-left: 10px;
+  flex-wrap: wrap;
 }
 
 .btn-contact {
@@ -289,26 +333,24 @@ iframe {
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
   transition: background-color 0.3s ease;
+  white-space: nowrap;
 }
 
 .btn-contact:hover {
   background-color: rgb(209, 16, 209);
 }
 
+/* Texto descrição projeto */
 .project-description {
   font-size: 1rem;
   line-height: 1.5;
-  color: #b0b0b0; /* Cor de texto mais clara e suave */
+  color: #b0b0b0;
   margin-bottom: 15px;
 }
-project-card:hover {
-  transform: translateY(-10px); /* Eleva o card ao passar o mouse */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Aumenta a sombra ao passar o mouse */
+
+/* Evita overflow horizontal em telas pequenas */
+body, html {
+  overflow-x: hidden;
 }
-.future-projects-text {
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: #e1e1e1; /* Cor mais suave para o texto */
-  text-align: center; /* Centraliza o texto */
-}
+
 
