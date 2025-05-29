@@ -270,6 +270,30 @@ iframe {
   color: white;
   transform: scale(1.05);
 }
+.d-flex.align-items-center {
+  gap: 10px; /* Espaçamento entre todos os ícones e botões */
+}
+
+.contact-buttons {
+  display: flex;
+  gap: 10px; /* Espaçamento entre os botões */
+  margin-left: 10px; /* Pequeno espaço entre imagens e botões */
+}
+
+.btn-contact {
+  background-color: rgb(239, 107, 239);
+  color: white;
+  border-radius: 20px;
+  padding: 8px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.btn-contact:hover {
+  background-color: rgb(209, 16, 209);
+}
 
 .project-description {
   font-size: 1rem;
